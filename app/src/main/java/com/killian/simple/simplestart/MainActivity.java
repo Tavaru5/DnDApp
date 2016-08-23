@@ -27,12 +27,5 @@ public class MainActivity extends Activity //implements View.OnClickListener
         Intent intent = new Intent(this, CreationActivity.class);
         startActivity(intent);
     }
-    /*@Override
-    public void onClick(View v)
-    {
-        if (v.getId() == R.id.newChar)
-        {
-            newChar.setText("I should make a character");
-        }
-    }*/
+
 }

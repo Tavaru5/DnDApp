@@ -10,4 +10,12 @@
     android:background="@drawable/bg"
     tools:context="com.killian.simple.simplestart.CreationActivity">
 
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_hint"
+        android:inputType="textCapWords"
+        android:imeOptions="actionDone"
+        android:id="@+id/charName"/>
+
 </RelativeLayout>

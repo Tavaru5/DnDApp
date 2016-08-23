@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SimpleStart</string>
+    <string name="name_hint">Character Name</string>
 </resources>
