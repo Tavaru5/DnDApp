@@ -10,6 +10,7 @@
     android:background="@drawable/bg"
     tools:context="com.killian.simple.simplestart.CreationActivity">
 
+    <!--android:layout_weight="1"-->
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,4 +19,11 @@
         android:imeOptions="actionDone"
         android:id="@+id/charName"/>
 
+    <android.support.v4.view.ViewPager
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/raceSwipe"
+        android:layout_below="@id/charName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+        <!--android:layout_weight="50"-->
 </RelativeLayout>
