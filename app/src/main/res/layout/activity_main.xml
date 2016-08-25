@@ -18,11 +18,11 @@
         android:onClick="charCreate"
         android:id="@+id/newChar"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Characters"
-        android:layout_below="@id/newChar"
-        android:id="@+id/chars"/>
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Characters"-->
+        <!--android:layout_below="@id/newChar"-->
+        <!--android:id="@+id/chars"/>-->
 
 </RelativeLayout>

@@ -1,7 +1,10 @@
 package com.killian.simple.simplestart;
 
 import android.content.Context;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -17,10 +20,12 @@ import android.widget.TextView;
  *Spells could be an optional extra page depending on what class you choose?
  *Well we'll cross that bridge when we get to it. Which hopefully will be soon*/
 
-//I REALLY NEED A PLACE FOR RACE STATS. Below?
+//I REALLY NEED A PLACE FOR RACE STATS. We're gonna put it in a swipe-up fragment
 
-public class CreationActivity extends AppCompatActivity
+public class CreationActivity extends FragmentActivity implements View.OnClickListener
 {
+
+    RacialTraitsFragment raceFrag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -31,11 +36,14 @@ public class CreationActivity extends AppCompatActivity
         ViewPager raceSwipe = (ViewPager) findViewById(R.id.raceSwipe);
         raceSwipe.setAdapter(new CustomPagerAdapter(this));
 
+        raceFrag = new RacialTraitsFragment();
+
         //Adding a page change listener. I'm sure there's a less messy way to do this, but I don't
         //know it. I really just need this to update the textViews when a new page is selected.
         /*raceSwipe.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels){}
+            public void onPageScrolled(int position, float positionOffset,
+                    int positionOffsetPixels){}
             @Override
             public void onPageSelected(int position)
             {
@@ -46,6 +54,30 @@ public class CreationActivity extends AppCompatActivity
             @Override
             public void onPageScrollStateChanged(int state){}
         });*/
+    }
+
+    //Adding onClick just for testing. Final product will be on an upwards swipe (hopefully)
+    @Override
+    public void onClick(View view)
+    {
+        FragmentManager fm = getSupportFragmentManager();
+        FragmentTransaction ft = fm.beginTransaction();
+        ft.setCustomAnimations(R.anim.slide_in_up, R.anim.slide_out_down);
+
+        if (!raceFrag.isAdded())
+        {
+            ft.add(R.id.creationScreen, raceFrag);
+        }
+        if (raceFrag.isHidden())
+        {
+            ft.show(raceFrag);
+        }
+        else
+        {
+            ft.hide(raceFrag);
+        }
+
+        ft.commit();
     }
 
     //A method to update the textViews with each race's information
@@ -62,7 +94,7 @@ public class CreationActivity extends AppCompatActivity
     public enum RacesEnum
     {
         DRAGONBORN(R.string.dragonborn, R.layout.dragonborn),
-        DROW(R.string.drow, R.layout.drow),
+        DROW( R.string.drow, R.layout.drow),
         HIGHELF(R.string.highelf, R.layout.highelf),
         WOODELF(R.string.woodelf, R.layout.woodelf),
         HELF(R.string.helf, R.layout.helf),
@@ -136,5 +168,16 @@ public class CreationActivity extends AppCompatActivity
             return mContext.getString(racesEnum.getTitleResId());
         }
 
+    }
+
+    //Fragment to show racial bonuses
+    public static class RacialTraitsFragment extends Fragment
+    {
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState)
+        {
+            return inflater.inflate(R.layout.racial_traits_fragment, container, false);
+        }
     }
 }
