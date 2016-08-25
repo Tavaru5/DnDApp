@@ -9,6 +9,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+
+/*Alright so crazy idea. Ya know how I didn't use fragments for race selection?
+ *Well what if I made all of character creation on a slide view?
+ *First slide is name and race, second can be ability scores, third can be class, etc.
+ *Spells could be an optional extra page depending on what class you choose?
+ *Well we'll cross that bridge when we get to it. Which hopefully will be soon*/
+
+//I REALLY NEED A PLACE FOR RACE STATS. Below?
 
 public class CreationActivity extends AppCompatActivity
 {
@@ -21,7 +30,30 @@ public class CreationActivity extends AppCompatActivity
 
         ViewPager raceSwipe = (ViewPager) findViewById(R.id.raceSwipe);
         raceSwipe.setAdapter(new CustomPagerAdapter(this));
+
+        //Adding a page change listener. I'm sure there's a less messy way to do this, but I don't
+        //know it. I really just need this to update the textViews when a new page is selected.
+        /*raceSwipe.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels){}
+            @Override
+            public void onPageSelected(int position)
+            {
+                //Call a method to update the race info. Mostly so I don't have to write all that
+                //code in the middle of a parameter list.
+                updateRaceInfo(position);
+            }
+            @Override
+            public void onPageScrollStateChanged(int state){}
+        });*/
     }
+
+    //A method to update the textViews with each race's information
+    /*public void updateRaceInfo (int position)
+    {
+        TextView abilityScores = (TextView) findViewById(R.id.abilityScores);
+        abilityScores.setText(Integer.toString(position));
+    }*/
 
     //Most of the following code is based off of the tutorial at
     //bignerdranch.com/blog/viewpager-without-fragments/
@@ -30,7 +62,19 @@ public class CreationActivity extends AppCompatActivity
     public enum RacesEnum
     {
         DRAGONBORN(R.string.dragonborn, R.layout.dragonborn),
-        DROW(R.string.drow, R.layout.drow);
+        DROW(R.string.drow, R.layout.drow),
+        HIGHELF(R.string.highelf, R.layout.highelf),
+        WOODELF(R.string.woodelf, R.layout.woodelf),
+        HELF(R.string.helf, R.layout.helf),
+        HUMAN(R.string.human, R.layout.human),
+        FORESTGNOME(R.string.forestgnome, R.layout.forestgnome),
+        STONEGNOME(R.string.stonegnome, R.layout.stonegnome),
+        HILLDWARF(R.string.hilldwarf, R.layout.hilldwarf),
+        MOUNTAINDWARF(R.string.mountaindwarf, R.layout.mountaindward),
+        HORC(R.string.horc, R.layout.horc),
+        LIGHTHALFLING(R.string.lighthalfling, R.layout.lighthalfling),
+        STOUTHALFLING(R.string.stouthalfling, R.layout.stouthalfling),
+        TIEFLING(R.string.tiefling, R.layout.tiefling);
 
         private int mTitleResId;
         private int mLayoutResId;
