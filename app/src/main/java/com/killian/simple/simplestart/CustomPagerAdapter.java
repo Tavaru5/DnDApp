@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 /**
  * Created by Silas on 8/25/2016.
+ * Our custom PagerAdapter. I'm pretty sure all of this is from the bignerdranch tutorial. I don't
+ * entirely understand what it does.
  */
 public class CustomPagerAdapter extends PagerAdapter
 {
@@ -18,8 +20,6 @@ public class CustomPagerAdapter extends PagerAdapter
         mContext = context;
     }
 
-    //It appears as though we are going to have to make our own viewpager class and intercept
-    //upward swipes, but only upward swipes. Hopefully won't be too hard.
 
     @Override
     public Object instantiateItem(ViewGroup collection, int position) {

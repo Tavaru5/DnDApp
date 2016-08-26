@@ -2,6 +2,7 @@ package com.killian.simple.simplestart;
 
 /**
  * Created by Silas on 8/25/2016.
+ * This is an enum containing references to the pictures and titles of races for the viewPager
  */
 public enum RacesEnum
 {

@@ -15,5 +15,41 @@
     <string name="stouthalfling">Stout Halfling</string>
     <string name="tiefling">Tiefling</string>
     <string name="woodelf">Wood Elf</string>
+    <string name="ability0">Str + 2, Cha + 1</string>
+    <string name="ability1">Dex + 2, Cha + 1</string>
+    <string name="ability2">Dex + 2, Int + 1</string>
+    <string name="ability3">Dex + 2, Wis + 1</string>
+    <string name="ability4">Cha + 2</string>
+    <string name="ability5">All + 1</string>
+    <string name="ability6">Int + 2, Dex + 1</string>
+    <string name="ability7">Int + 2, Con + 1</string>
+    <string name="ability8">Con + 2, Wis + 1</string>
+    <string name="ability9">Con + 2, Str + 2</string>
+    <string name="ability10">Str + 2, Con + 1</string>
+    <string name="ability11">Dex + 2, Cha + 1</string>
+    <string name="ability12">Dex + 2, Con + 1</string>
+    <string name="ability13">Cha + 2, Int + 1</string>
+    <string name="sizeM">Size: Medium</string>
+    <string name="sizeS">Size: Small</string>
+    <string name="spd25">Speed: 25ft</string>
+    <string name="spd30">Speed: 30ft</string>
+    <string name="traits0"></string>
+    <string name="traits1"></string>
+    <string name="traits2"></string>
+    <string name="traits3"></string>
+    <string name="traits4"></string>
+    <string name="traits5"></string>
+    <string name="traits6"></string>
+    <string name="traits7"></string>
+    <string name="traits8"></string>
+    <string name="traits9"></string>
+    <string name="traits10"></string>
+    <string name="traits11"></string>
+    <string name="traits12"></string>
+    <string name="traits13"></string>
+    <!--We will probably use string formatting for traits strings.
+    \n for new lines (between traits)
+    %1$s for a string. The string requires code found in the fragment-->
+
 
 </resources>
