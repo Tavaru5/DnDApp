@@ -13,7 +13,7 @@ public enum RacesEnum
     HELF(R.string.helf, R.layout.helf),
     HUMAN(R.string.human, R.layout.human),
     FORESTGNOME(R.string.forestgnome, R.layout.forestgnome),
-    STONEGNOME(R.string.stonegnome, R.layout.stonegnome),
+    ROCKGNOME(R.string.rockgnome, R.layout.rockgnome),
     HILLDWARF(R.string.hilldwarf, R.layout.hilldwarf),
     MOUNTAINDWARF(R.string.mountaindwarf, R.layout.mountaindward),
     HORC(R.string.horc, R.layout.horc),

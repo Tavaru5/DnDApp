@@ -13,6 +13,9 @@ import android.widget.TextView;
  * the updateRaceInfo method at some point. Pretty much just a text fragment that changes text
  * based on what position the ViewPager is in.
  */
+
+//We might need a scrollView
+//We also need to figure out where to put languages
 public class RacialTraitsFragment extends Fragment
 {
     TextView abilityView;
@@ -73,7 +76,7 @@ public class RacialTraitsFragment extends Fragment
             case 3:
                 abilityView.setText(R.string.ability3);
                 sizeView.setText(R.string.sizeM);
-                speedView.setText(R.string.spd30);
+                speedView.setText(R.string.spd35);
                 traitsView.setText(R.string.traits0);
                 break;
             //Half Elf
@@ -97,7 +100,7 @@ public class RacialTraitsFragment extends Fragment
                 speedView.setText(R.string.spd25);
                 traitsView.setText(R.string.traits0);
                 break;
-            //Stone Gnome
+            //Rock Gnome
             case 7:
                 abilityView.setText(R.string.ability7);
                 sizeView.setText(R.string.sizeS);

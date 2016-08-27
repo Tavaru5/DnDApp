@@ -11,7 +11,7 @@
     <string name="human">Human</string>
     <string name="lighthalfling">Lightfoot Halfling</string>
     <string name="mountaindwarf">Mountain Dwarf</string>
-    <string name="stonegnome">Stone Gnome</string>
+    <string name="rockgnome">Rock Gnome</string>
     <string name="stouthalfling">Stout Halfling</string>
     <string name="tiefling">Tiefling</string>
     <string name="woodelf">Wood Elf</string>
@@ -33,6 +33,7 @@
     <string name="sizeS">Size: Small</string>
     <string name="spd25">Speed: 25ft</string>
     <string name="spd30">Speed: 30ft</string>
+    <string name="spd35">Speed: 35ft</string>
     <string name="traits0"></string>
     <string name="traits1"></string>
     <string name="traits2"></string>
@@ -47,6 +48,111 @@
     <string name="traits11"></string>
     <string name="traits12"></string>
     <string name="traits13"></string>
+    <!--These extra strings are only for non-unique race traits (this include traits that are
+    simply shared between subraces). Unique race traits will most likely go in the race's own
+    traits string.-->
+    <string name="darkvision"><b>Darkvision.</b> You can see in dim light within 60 ft as if it were
+        bright light, and in darkness as if it were dim light. You can't discern color in darkness,
+        only shades of gray.</string>
+    <string name="dwarvenResilience"><b>Dwarven Resilience.</b> You have advantage on saving throws
+        against poision, and you have resistance against poison damage.</string>
+    <string name="dwarvenCombatTraining"><b>Dwarven Combat Training.</b> You have proficiency with
+        the battleaxe, handaxe, throwing hammer, and warhammer.</string>
+    <string name="dwarvenToolProficiency"><b>Tool Proficiency.</b> You gain proficiency with the
+        artisan's tools of your choic: smith's tools, brewer's supplies, or mason's tools.</string>
+    <string name="stonecunning"><b>Stonecunning.</b> Whenever you make an Intelligence (History)
+        check related to the origin of stonework, you are considered proficient in History and add
+        double your proficiency bonus, instead of your normal proficiency bonus.</string>
+    <string name="dwarvenToughness"><b>Dwarven Toughness.</b> Your hit point maximum increases by 1,
+        and it increases by an additional 1 every time you gain a level.</string>
+    <string name="dwarvenArmorTraining"><b>Dwarven Armor Training.</b> You have proficiency with
+        light and medium armor.</string>
+    <string name="keenSenses"><b>Keen Senses.</b> You have proficiency in Perception</string>
+    <string name="feyAncestry"><b>Fey Ancestry.</b> You have advantage on saving throws
+        against being charmed, and magic can't put you to sleep.</string>
+    <string name="elfTrance"><b>Trance.</b> Elves don't need to sleep. Instead, they
+        meditate deeply, remaining semiconscious, for 4 hours a day. After resting this way,
+        you gain the same benefit that a human does from 8 hours of sleep.</string>
+    <string name="elfWeaponTraining"><b>Elf Weapon Training.</b> You have proficiency with
+        the longsword, shortsword, shortbow, and longbow.</string>
+    <string name="elfCantrip"><b>Cantrip.</b> You know one cantrip of your choice from the wizard
+        spell list. Intelligence is your spellcasting ability for it.</string>
+    <string name="maskOfTheWild"><b>Mask of the Wild.</b> You can attempt to hide even when you are
+        only lightly obscured by foliage, heavy rain, falling snow, mist, or other natural
+        phenomena.</string>
+    <string name="sunlightSensitivity"><b>Sunlight Sensitivity.</b> You have disadvantage on
+        attack rolls and on Wisdom (Perception) checks that rely on sight when you, the target of
+        your attack, or whatever you are trying to perceive is in direct sunlight.</string>
+    <string name="drowMagic"><b>Drow Magic.</b> You know the <i>dancing lights</i> cantrip. When
+        you reach 3rd level, you can cast the <i>faerie fire</i> spell once per day. When you reach
+        5th level, you can also cast the <i>darkness</i> spell once per day. Charisma is your
+        spellcasting ability for these spells.</string>
+    <string name="drowWeaponTraining"><b>Drow Weapon Training.</b> You have proficiency with
+        rapiers, shortswords, and hand crossbows.</string>
+    <string name="brave"><b>Brave.</b> You have advantage on saving  throws against being
+        frightened.</string>
+    <string name="lucky"><b>Lucky.</b> When you roll a 1 on an attack roll, ability check, or
+        saving throw, you can reroll the die and must use the new roll.</string>
+    <string name="halflingNimbleness"><b>Halfling Nimbleness.</b> You can move through the space of
+        any creature that is of a size larger than yours.</string>
+    <string name="naturallyStealthy"><b>Naturally Stealthy.</b> You can attempt to hide even when
+        you are obscured only by a creature that is at least one size larger than you.</string>
+    <string name="stoutResilience"><b>Stout Resilience.</b> You have advantage on saving throws
+        against poison, and you have resistance against poison damage.</string>
+    <string name="gnomeCunning"><b>Gnome Cunning.</b> You have advantage on all Intelligence,
+        Wisdom, and Charisma saving throws against magic.</string>
+    <string name="draconicAncestry"><b>Draconic Ancestry.</b> You have draconic ancestry. Choose
+        one type of dragon from the Draconic Ancestry tab. Your breath weapon and damage resistance
+        are determined by the dragon type.</string>
+    <string name="breathWeapon"><b>Breath Weapon.</b> You can use your action to exhale destructive
+        energy. Your draconic ancestry determines the size, shape, and damage type of the
+        exhalation.\n\tWhen you use your breath weapon, each creature in the area of exhalation
+        must make a saving throw, the type of which is determined by your draconic ancestry. The DC
+        for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A
+        creature takes 2d6 damage on a failed save, and half as much damage on a successful one.
+        The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level.
+        /n/tAfter you use your breath weapon, you can't use it again until after you complete
+        a long rest.</string>
+    <string name="draconicResistance"><b>Damage Resistance.</b> You have resistance to the damage
+        type associated with your draconic ancestry.</string>
+    <string name="naturalIllusionist"><b>Natural Illusionist.</b> You know the
+        <i>minor illusion</i> cantrip. Intelligence is your spellcasting ability for it.</string>
+    <string name="speakWithSBeasts"><b>Speak with Small Beasts.</b> Through sounds and gestures,
+        you can communicate simple ideas with Small or smaller beasts.</string>
+    <string name="arificersLore"><b>Artificer's Lore.</b> Whenever you make an Intelligence
+        (History) check related to magic items, alchemical objects, or technological devices, you
+        can add twice your proficiency bonus, instead of your normal proficiency bonus.</string>
+    <string name="tinker"><b>Tinker.</b> You have proficiency with artisan’s tools (tinker’s tools).
+        Using those tools, you can spend 1 hour and 10 gp worth of materials to construct a Tiny
+        clockwork device (AC 5, 1 hp). The device ceases to function after 24 hours (unless you
+        spend 1 hour repairing it to keep the device functioning), or when you use your action to
+        dismantle it; at that time, you can reclaim the materials used to create it. You can have
+        up to three such devices active at a time.\n\tWhen you create a device, choose one of the
+        following options:\n<i>Clockwork Toy.</i> This toy is a clockwork animal, monster, or
+        person, such as a frog, mouse, bird, dragon, or soldier. When placed on the ground, the toy
+        moves 5 feet across the ground on each of your turns in a random direction. It makes noises
+        as appropriate to the creature it represents.\n<i>Fire Starter.</i> The device produces a
+        miniature flame, which you can use to light a candle, torch, or campfire. Using the device
+        requires your action.\n<i>Music Box.</i> When opened, this music box plays a single song at
+        a moderate volume. The box stops playing when it reaches the song’s end or when it is
+        closed.</string>
+    <string name="helfVersatility"><b>Skill Versatility.</b> You gain proficiency in two skills of
+        your choice.</string>
+    <string name="menacing"><b>Menacing.</b> You gain proficiency in the Intimidation
+        skill.</string>
+    <string name="relentlessEndurance"><b>Relentless Endurance.</b> When you are reduced to 0 hit
+        points but not killed outright, you can drop to 1 hit point instead. You can't use this
+        feature again until you finish a long rest.</string>
+    <string name="savageAttacks"><b>Savage Attacks.</b> When you score a critical hit with a melee
+        weapon attack, you can roll one of the weapon's damage dice one additional time and add it
+        to the extra damage of the critical hit.</string>
+    <string name="hellishResistance"><b>Hellish Resistance.</b> You have resistance to
+        fire damage.</string>
+    <string name="infernalLegacy"><b>Infernal Legacy.</b> You know the <i>thaumaturgy</i> cantrip.
+        Once you reach the 3rd level, you can cast the <i>hellish rebuke</i> spell once per day
+        as a 2nd-level spell. Once you reach 5th level, you can also cast the <i>darkness</i> spell
+        once per day. Charisma is your spellcasting ability for these spells.</string>
+
     <!--We will probably use string formatting for traits strings.
     \n for new lines (between traits)
     %1$s for a string. The string requires code found in the fragment-->
