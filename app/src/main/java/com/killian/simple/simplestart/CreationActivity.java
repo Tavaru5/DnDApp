@@ -38,11 +38,10 @@ public class CreationActivity extends FragmentActivity
     protected void onCreate(Bundle savedInstanceState)
     {
 
-        raceFrag = new RacialTraitsFragment();
-
 //        ViewPager raceSwipe = new ViewPager(this, this);
 
-        mDetector = new GestureDetectorCompat(this,new MyGestureListener(this));
+
+
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creation);
@@ -52,6 +51,14 @@ public class CreationActivity extends FragmentActivity
         ViewPager raceSwipe = (ViewPager) findViewById(R.id.raceSwipe);
 //        raceSwipe.setmDetector(mDetector);
         raceSwipe.setAdapter(new CustomPagerAdapter(this));
+
+        raceFrag = new RacialTraitsFragment();
+
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+        ft.add(R.id.creationScreen, raceFrag).hide(raceFrag).commit();
+
+        mDetector = new GestureDetectorCompat(this,new MyGestureListener(this));
+
 
 
 
@@ -90,7 +97,6 @@ public class CreationActivity extends FragmentActivity
     public boolean dispatchTouchEvent(MotionEvent event)
     {
         onTouchEvent(event);
-        System.out.println("AHHHHHHHHHHHHHHHHH");
         return super.dispatchTouchEvent(event);
     }
 

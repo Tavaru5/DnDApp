@@ -21,7 +21,7 @@ class MyGestureListener extends GestureDetector.SimpleOnGestureListener
     {
         super();
         parent = activity;
-        this.raceFrag = parent.getRaceFrag();
+        raceFrag = parent.getRaceFrag();
     }
 
     //We don't want to ignore any swipes, so always return true
@@ -30,6 +30,7 @@ class MyGestureListener extends GestureDetector.SimpleOnGestureListener
     {
         return true;
     }
+
 
     //On flings is when we want to open the fragment.
     //Still need to adjust so only opens on proper y velocities,
@@ -45,11 +46,6 @@ class MyGestureListener extends GestureDetector.SimpleOnGestureListener
         //Set our animations
         ft.setCustomAnimations(R.anim.slide_in_up, R.anim.slide_out_down);
 
-        //Add it if it isn't already (might be taken out)
-        if (!raceFrag.isAdded())
-        {
-            ft.add(R.id.creationScreen, raceFrag);
-        }
         //Make it show if it's hidden, and vice versa. This is where we will check velocities.
         if (raceFrag.isHidden() && (Math.abs(velocityY) > Math.abs(velocityX) && velocityY < 0))
         {

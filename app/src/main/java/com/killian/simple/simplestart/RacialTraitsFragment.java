@@ -52,6 +52,7 @@ public class RacialTraitsFragment extends Fragment
         //Resources res = getResources();
         //String text = String.format(res.getString(R.string.main_text),
         //        res.getString(R.string.parameter_text), etc.   );
+        System.out.println(abilityView);
         switch(position)
         {
             //Dragonborn
