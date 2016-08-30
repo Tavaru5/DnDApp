@@ -2,7 +2,9 @@ package com.killian.simple.simplestart;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Html;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -42,6 +44,7 @@ public class RacialTraitsFragment extends Fragment
 
     }
 
+
     public void updateRaceInfo(int position)
     {
         //Switch to show information based on position
@@ -56,7 +59,9 @@ public class RacialTraitsFragment extends Fragment
                 abilityView.setText(R.string.ability0);
                 sizeView.setText(R.string.sizeM);
                 speedView.setText(R.string.spd30);
-                traitsView.setText(R.string.traits0);
+                traitsView.setText(Html.fromHtml(String.format(getString(R.string.traits0),
+                        getString(R.string.draconicAncestry),getString(R.string.breathWeapon),
+                        getString(R.string.draconicResistance))));
                 break;
             //Drow
             case 1:

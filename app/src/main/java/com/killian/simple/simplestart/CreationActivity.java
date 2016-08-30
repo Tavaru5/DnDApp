@@ -32,6 +32,7 @@ public class CreationActivity extends FragmentActivity
 
     RacialTraitsFragment raceFrag;
     EditText nameField;
+    private GestureDetectorCompat mDetector;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -39,17 +40,17 @@ public class CreationActivity extends FragmentActivity
 
         raceFrag = new RacialTraitsFragment();
 
-        MyViewPager raceSwipe = new MyViewPager(this, this);
+//        ViewPager raceSwipe = new ViewPager(this, this);
 
-        GestureDetectorCompat mDetector = raceSwipe.getmDetector();
+        mDetector = new GestureDetectorCompat(this,new MyGestureListener(this));
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_creation);
 
         nameField = (EditText) findViewById(R.id.charName);
 
-        raceSwipe = (MyViewPager) findViewById(R.id.raceSwipe);
-        raceSwipe.setmDetector(mDetector);
+        ViewPager raceSwipe = (ViewPager) findViewById(R.id.raceSwipe);
+//        raceSwipe.setmDetector(mDetector);
         raceSwipe.setAdapter(new CustomPagerAdapter(this));
 
 
@@ -79,6 +80,21 @@ public class CreationActivity extends FragmentActivity
     {
         return raceFrag;
     }
+
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        this.mDetector.onTouchEvent(event);
+        return super.onTouchEvent(event);
+    }
+
+    public boolean dispatchTouchEvent(MotionEvent event)
+    {
+        onTouchEvent(event);
+        System.out.println("AHHHHHHHHHHHHHHHHH");
+        return super.dispatchTouchEvent(event);
+    }
+
+
 
 
 }

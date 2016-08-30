@@ -29,13 +29,7 @@ public class MyViewPager extends ViewPager
     //Constructor with the creation activity. This way we can get an mDetector with the correct
     //initialization. Not entirely sure if it's needed, but this is the best solution
     //we could figure out.
-    MyViewPager(Context context, CreationActivity activity)
-    {
-        super(context);
-        parent = activity;
-        //Set the mDetector properly
-        mDetector = new GestureDetectorCompat(this.getContext(), new MyGestureListener(parent));
-    }
+
 
     //Constructor used by setContentView. We just use super. Not sure if this is necessary.
     MyViewPager(Context context, AttributeSet attrs)
@@ -43,30 +37,5 @@ public class MyViewPager extends ViewPager
         super(context, attrs);
     }
 
-    //An old way of getting the parent Activity. Theoretically we could use this instead of the
-    //constructor, but we don't. Eventually this should be cut I think.
-    public void passActivity(CreationActivity activity)
-    {
-        parent = activity;
-    }
 
-    //Get and set for the mDetector. This way we can get the proper mDetector from the one we
-    //create, then give it to the auto-generated one.
-    public void setmDetector(GestureDetectorCompat detector)
-    {
-        mDetector = detector;
-    }
-
-    public GestureDetectorCompat getmDetector()
-    {
-        return mDetector;
-    }
-
-    //This is from the tutorial I used. Not entirely sure what it does, but it makes everything work
-    @Override
-    public boolean onTouchEvent(MotionEvent event)
-    {
-        this.mDetector.onTouchEvent(event);
-        return super.onTouchEvent(event);
-    }
 }

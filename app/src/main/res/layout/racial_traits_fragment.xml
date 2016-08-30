@@ -1,37 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/customborder">
+    android:fillViewport="true">
 
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/abilityView"/>
+        android:background="@drawable/customborder">
 
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/abilityView"
-        android:id="@+id/sizeView"/>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/abilityView"/>
 
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/abilityView"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/sizeView"
-        android:id="@+id/speedView"/>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/abilityView"
+            android:id="@+id/sizeView"/>
 
-    <TextView
-        android:textColor="@color/black"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sizeView"
-        android:id="@+id/traitsView"/>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/abilityView"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/sizeView"
+            android:id="@+id/speedView"/>
 
-</RelativeLayout>
+        <TextView
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sizeView"
+            android:id="@+id/traitsView"/>
+
+    </RelativeLayout>
+
+</ScrollView>
+
